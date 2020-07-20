@@ -2,7 +2,8 @@ let products = getSaveProducts()
 
 const filters = {
     searchItem: '',
-    availableProducts: false
+    availableProducts: false,
+    sortBy : 'byEdited'
 }
 
 renderProducts(products, filters)
@@ -15,7 +16,7 @@ document.querySelector('#search-products').addEventListener('input', function(e)
 document.querySelector('#add-product-form').addEventListener('submit', function(e) {
     e.preventDefault()
     const id = uuidv4()
-    const timestamp = moment().value0f()
+    const timestamp = moment().value0f
     products.push({
         id: id,
         price: '',
@@ -49,3 +50,9 @@ window.addEventListener('storage',function(e){
 const now = moment()
 now.locale('fa')
 console.log(now.format('MMMM Do YYYY, h:mm:ss a'))
+
+
+document.querySelector('#sort').addEventListener('change',function(e){
+    filters.sortBy = e.target.value
+    renderProducts(products, filters)
+})

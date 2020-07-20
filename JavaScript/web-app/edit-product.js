@@ -23,7 +23,7 @@ dateElement.textContent = lastEditMessage(product.updated)
 
 titleElement.addEventListener('input',function(e){
     product.title = e.target.value
-    product.updated = moment().value0f()
+    product.updated = moment().value0f
     dateElement.textContent = lastEditMessage(product.updated)
     saveProducts(products)
 })
@@ -31,7 +31,7 @@ titleElement.addEventListener('input',function(e){
 
 priceElement.addEventListener('input',function(e){
     product.price = e.target.value
-    product.updated = moment().value0f()
+    product.updated = moment().value0f
     saveProducts(products)
 })
 

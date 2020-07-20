@@ -29,7 +29,25 @@ const toggleProduct = function(id) {
     }
 }
 
+const sortProducts = function(product, sortBy) {
+    if(sortBy === 'byEdited'){
+        return products.sort(function(a,b){
+            if(a.updated > b.updated){
+                return -1
+            } else if (a.updated < b.updated){
+                return 1
+            } else {
+                return 0
+            }
+        })
+    } else {
+        return products
+    }
+
+}
+
 const renderProducts = function(products, filters) {
+    products = sortProducts(products, filters.sortBy)
     let filteredProducts = products.filter(function(item) {
         return item.title.toLowerCase().includes(filters.searchItem.toLowerCase())
     })
