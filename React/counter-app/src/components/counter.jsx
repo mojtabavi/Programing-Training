@@ -3,25 +3,24 @@ import React, { Component } from "react";
 class Counter extends Component {
   state = {
     count: 1,
-    tags: ["tag1", "tag2", "tag3"],
+    // tags: ["tag1", "tag2", "tag3"],
+    tags: [],
     // imageUrl: "https://picsum.photos/200",
   };
 
   //   styles = { fontSize: 50, fontWeight: "bold" };
 
+  renderTags() {
+    if (this.state.tags.length === 0) return <p>There are no Tags!</p>;
+
+    return this.state.tags.map((tag) => <li key={tag}>{tag}</li>);
+  }
+
   render() {
     return (
       <div>
-        {/* <img src={this.state.imageUrl} alt=""></img> */}
-        <span style={{ fontSize: 15 }} className={this.getBadgeClasses()}>
-          {this.formatCount()}
-        </span>
-        <button className="btn btn-secondary btn-sm">Increament</button>
-        <ul>
-          {this.state.tags.map((tag) => (
-            <li key={tag}>{tag}</li>
-          ))}
-        </ul>
+        {this.state.tags.length === 0 && "Please create a new tag!"}
+        <ul>{this.renderTags()}</ul>
       </div>
     );
   }
