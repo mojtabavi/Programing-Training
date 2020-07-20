@@ -15,9 +15,10 @@ class Counter extends Component {
     return this.state.tags.map((tag) => <li key={tag}>{tag}</li>);
   }
 
-  handleIncrement() {
-    console.log("Increment Clicked");
-  }
+  handleIncrement = () => {
+    this.state.count++;
+    this.setState({ count: this.state.count + 1 });
+  };
 
   render() {
     return (
