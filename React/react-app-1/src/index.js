@@ -6,4 +6,4 @@
 
 
 const square = (number) => number * number;
-console.log(square())
+console.log(square(5));
