@@ -3,6 +3,7 @@ import React, { Component } from "react";
 class Counter extends Component {
   state = {
     count: 1,
+    tags: ["tag1", "tag2", "tag3"],
     // imageUrl: "https://picsum.photos/200",
   };
 
@@ -16,6 +17,11 @@ class Counter extends Component {
           {this.formatCount()}
         </span>
         <button className="btn btn-secondary btn-sm">Increament</button>
+        <ul>
+          {this.state.tags.map((tag) => (
+            <li key={tag}>{tag}</li>
+          ))}
+        </ul>
       </div>
     );
   }
