@@ -1,12 +1,9 @@
-const person = {
-  name: 'Ali',
-  walk() {
-    console.log(this)
-  }
-};
+// const square = function (number) {
+//   return number * number;
+// };
 
 
-person.walk(); // Print objects
 
-const walk = person.walk.bind(person);
-walk(); // print undefind (it reference to window objects)
+
+const square = (number) => number * number;
+console.log(square())
