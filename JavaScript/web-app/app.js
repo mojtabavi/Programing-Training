@@ -23,7 +23,7 @@ document.querySelector('#add-product-form').addEventListener('submit', function(
         title: e.target.elements.productTitle.value,
         exist: true,
         created: timestamp,
-        updated: timestamp
+        updated: timestamp,
     })
     saveProducts(products)
     renderProducts(products, filters)
