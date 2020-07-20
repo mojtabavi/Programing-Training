@@ -8,5 +8,5 @@ const person = {
 
 person.walk(); // Print objects
 
-const walk = person.walk;
-walk(); // print undefind
+const walk = person.walk.bind(person);
+walk(); // print undefind (it reference to window objects)
