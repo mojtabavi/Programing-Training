@@ -18,10 +18,13 @@ if(product == undefined){
 
 titleElement.value = product.title
 priceElement.value = product.price
+// dateElement.textContent = `Last Edit: ${moment(product.updated).locale('fa').fromNow()}`
+dateElement.textContent = lastEditMessage(product.updated)
 
 titleElement.addEventListener('input',function(e){
     product.title = e.target.value
     product.updated = moment().value0f()
+    dateElement.textContent = lastEditMessage(product.updated)
     saveProducts(products)
 })
 
@@ -52,5 +55,6 @@ window.addEventListener('storage',function(e){
         
         titleElement.value = product.title
         priceElement.value = product.price
+        dateElement.textContent = lastEditMessage(product.updated)
     }
 })
