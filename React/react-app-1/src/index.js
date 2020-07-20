@@ -1,12 +1,12 @@
 const person = {
-  name: 'Ali', // this is a property
-  walk() {}, // this is a method
-  talk() {}
+  name: 'Ali',
+  walk() {
+    console.log(this)
+  }
 };
 
 
-person.talk();
-person.name = '';
+person.walk(); // Print objects
 
-const targetMember = 'name';
-person['name'] = 'John';
+const walk = person.walk;
+walk(); // print undefind
