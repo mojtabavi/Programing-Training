@@ -6,7 +6,8 @@ import * as serviceWorker from './serviceWorker';
 import 'bootstrap/dist/css/bootstrap.css';
 import Counter from "./components/counter";
 
-ReactDOM.render(<Counter />,
+
+ReactDOM.render( < Counter / > ,
   document.getElementById('root')
 );
 
