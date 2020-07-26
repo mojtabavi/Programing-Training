@@ -1,6 +1,11 @@
 const getSaveProducts = () => {
     const productsJSON = localStorage.getItem('products')
-    return (productsJSON !== null) ? JSON.parse(productsJSON) : []
+    try{
+        return (productsJSON !== null) ? JSON.parse(productsJSON) : []
+    }catch(e){
+        return []
+    }
+    // return (productsJSON !== null) ? JSON.parse(productsJSON) : []
     // if (productsJSON !== null) {
     //     return JSON.parse(productsJSON)
     // } else {
