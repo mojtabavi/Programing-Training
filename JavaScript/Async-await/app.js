@@ -43,3 +43,10 @@ createProduct = () => {
 }
 
 
+async function getData() {
+    await createProduct()
+    getProduct()
+
+}
+
+getData()
