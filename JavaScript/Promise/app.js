@@ -23,15 +23,24 @@ getProduct = () => {
 
 
 createProduct = () => {
+    return new Promise((resolve,reject) => {
 
-    setTimeout(() => {
-        products.push({
-            title: 'New Book',
-            price: 78
-
-        })
-    },3000)
+        setTimeout(() => {
+            products.push({
+                title: 'New Book',
+                price: 78
+    
+            })
+            const error = false
+        if(!error){
+            resolve()
+        }else{
+            reject('Error')
+        }
+        },3000) 
+    })
+    
 }
 
 
-createProduct(getProduct)
+createProduct().then(getProduct).catch(err => console.log(err))
