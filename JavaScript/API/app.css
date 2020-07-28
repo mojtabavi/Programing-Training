@@ -1,0 +1,25 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 5em;
+}
+
+button {
+    margin: 2em;
+    background: #0084ff;
+    padding: 1rem 2rem;
+    color: white;
+    border-style: none;
+    transition-duration: 300ms;
+    border-radius: 5px;
+}
+
+button:hover {
+    box-shadow: -3px 3px 2px rgba(0, 0, 0,0.2);
+}
