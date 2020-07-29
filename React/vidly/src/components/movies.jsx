@@ -6,6 +6,7 @@ import Pagination from "./common/pagination"
 class Movies extends Component {
     state = {   
         movies: getMovies(),
+        currentPage: 1,
         pageSize: 4
       }
 
@@ -25,7 +26,7 @@ class Movies extends Component {
 
 
     handlePageChange = page => {
-        console.log(page)
+        this.setState({currentPage: page})
     }
 
 
@@ -68,7 +69,8 @@ class Movies extends Component {
         </table> 
         <Pagination 
         itemCount={count} 
-        pageSize={this.state.pageSize} 
+        pageSize={this.state.pageSize}
+        currentPage={this.state.currentPage} 
         onPageChanged={this.handlePageChange} 
         />
         </React.Fragment>
