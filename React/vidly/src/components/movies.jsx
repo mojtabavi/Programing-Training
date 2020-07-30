@@ -46,14 +46,16 @@ class Movies extends Component {
 
     render() { 
         const {length: count} = this.state.movies;
-        const {pageSize,currentPage,movies: allMovies} = this.state;
+        const {pageSize,currentPage,movies: allMovies,selectedGenre} = this.state;
 
 
 
         if(count === 0)
             return (<p>There are no movies in database</p>);
 
-            const movies = paginate(allMovies,currentPage,pageSize);
+            const filtered = selectedGenre ? allMovies.filter(m => m.genre._id == selectedGenre._id) : allMovies;
+
+            const movies = paginate(filtered,currentPage,pageSize);
             
             
             return ( 
@@ -67,7 +69,7 @@ class Movies extends Component {
             </div>
             <div className="col">
 
-                <p>Showing {count} movies in database</p>
+                <p>Showing {filtered.length} movies in database</p>
                 <table className="table">
                     <thead>
                         <tr>
@@ -97,7 +99,7 @@ class Movies extends Component {
                     </tbody>
                 </table> 
                 <Pagination 
-                itemCount={count} 
+                itemCount={filtered.length} 
                 pageSize={pageSize}
                 currentPage={currentPage} 
                 onPageChanged={this.handlePageChange} 
