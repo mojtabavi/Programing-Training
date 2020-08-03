@@ -3,10 +3,10 @@ import React from 'react';
 
 const NotFound = () => {
     return (
-    <ReactFragment>
+    <React.Fragment>
     <h1>Movie</h1>
     <button className="btn btn-primary btn-lg">Save</button>
-    </ReactFragment>  );
+    </React.Fragment>  );
 }
  
 export default NotFound;
