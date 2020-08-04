@@ -1,12 +1,12 @@
 import React from 'react';
 
 
-const NotFound = () => {
+const MovieForm = ({ match,history }) => {
     return (
     <React.Fragment>
-    <h1>Movie</h1>
-    <button className="btn btn-primary btn-lg">Save</button>
+    <h1>Movie Form {match.params.id}</h1>
+    <button className="btn btn-primary btn-lg" onClick={() => history.push('/movies')}>Save</button>
     </React.Fragment>  );
 }
  
-export default NotFound;
+export default MovieForm;
