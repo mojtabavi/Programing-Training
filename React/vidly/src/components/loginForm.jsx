@@ -2,11 +2,20 @@ import React, { Component } from 'react';
 
 
 class LoginForm extends Component {
+    handleSubmit = e => {
+        e.preventDefault();
+
+        //Call the Server
+        console.log('Submitted');
+    };
+
+
+
     render() { 
         return (
           <div>
             <h1>Login</h1>
-            <form action="">
+            <form onSubmit={this.handleSubmit}>
               <div className="form-group">
                 <lable htmlFor="username">Username</lable>
                 <input id="username" type="text" className="form-control" type="text" />
