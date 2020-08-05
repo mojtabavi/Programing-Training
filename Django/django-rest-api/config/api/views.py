@@ -1,5 +1,5 @@
 # from django.shortcuts import render
-from rest_framework import viewsets
+from rest_framework import viewsets, permissions
 from .models import Course
 from django.contrib.auth.models import User
 from .serializers import CourseSerializer,UserSerializer
@@ -14,3 +14,4 @@ class CourseView(viewsets.ModelViewSet):
 class UserView(viewsets.ModelViewSet):
     queryset = User.objects.all()
     serializer_class = UserSerializer
+    permission_classes = [permissions.IsAdminUser]
