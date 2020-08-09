@@ -44,7 +44,21 @@ class App extends Component {
       throw new Error('')
 
     } catch (ex) {
-      alert('Something failed while Delete the post');
+
+      ex.request
+      ex.response 
+      //Expected (404: not found, 400: bad request) - Client Errors
+      // - Display specific error message
+      //
+      if (ex.response && ex.response.status === 404)
+        alert('This post has aleardy been deleted.');
+      else {
+        console.log('Logging the error',ex);
+        alert("An unexpected error occurred.");
+      }
+      //Unexpected(network down, server down, db down, bug)
+      // - Log them
+      // - Display a generic and friendly error message
       this.setState({posts: orginalPosts});
     }
     
