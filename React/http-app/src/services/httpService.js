@@ -1,5 +1,5 @@
 import axios from 'axios';
-
+import { toast } from 'react-toastify';
 
 axios.interceptors.response.use(null, error => {
 
@@ -7,7 +7,15 @@ axios.interceptors.response.use(null, error => {
 
     if (!expectedError) {
         console.log('Logging the error', error);
-        alert("An unexpected error occurred.");
+        toast.error("An unexpected error occurred.", {
+          position: "top-center",
+          autoClose: 5000,
+          hideProgressBar: false,
+          closeOnClick: false,
+          pauseOnHover: true,
+          draggable: true,
+          progress: undefined,
+        });
     }
 
     return Promise.reject(error)

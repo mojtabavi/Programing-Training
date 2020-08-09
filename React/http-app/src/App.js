@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import "./App.css";
 import http from './services/httpService';
 import config from "./config.json";
+import { ToastContainer } from 'react-toastify';
+import "react-toastify/dist/ReactToastify.css";
 
 
 
@@ -42,7 +44,7 @@ class App extends Component {
     this.setState({ posts });
 
     try{
-      await http.delete(config.apiEndPoint + '/999' + post.id);
+      await http.delete('s' + config.apiEndPoint + '/999' + post.id);
       // console.log("Deleted");
 
     } catch (ex) {
@@ -66,6 +68,7 @@ class App extends Component {
   render() {
     return (
       <React.Fragment>
+        <ToastContainer position="top-center" autoClose={5000} hideProgressBar={false} newestOnTop={false} closeOnClick={false} rtl={false} pauseOnFocusLoss draggable pauseOnHover />
         <button className="btn btn-primary" onClick={this.handleAdd}>
           Add
         </button>
@@ -78,22 +81,16 @@ class App extends Component {
             </tr>
           </thead>
           <tbody>
-            {this.state.posts.map(post => (
+            {this.state.posts.map((post) => (
               <tr key={post.id}>
                 <td>{post.title}</td>
                 <td>
-                  <button
-                    className="btn btn-info btn-sm"
-                    onClick={() => this.handleUpdate(post)}
-                  >
+                  <button className="btn btn-info btn-sm" onClick={() => this.handleUpdate(post)}>
                     Update
                   </button>
                 </td>
                 <td>
-                  <button
-                    className="btn btn-danger btn-sm"
-                    onClick={() => this.handleDelete(post)}
-                  >
+                  <button className="btn btn-danger btn-sm" onClick={() => this.handleDelete(post)}>
                     Delete
                   </button>
                 </td>
