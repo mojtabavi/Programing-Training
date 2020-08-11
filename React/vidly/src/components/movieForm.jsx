@@ -11,7 +11,7 @@ class MovieForm extends Form {
   state = {
     data: {
       title: "",
-      genreId: "",
+      genre: "",
       numberInStock: "",
       dailyRentalRate: "",
     },
@@ -22,7 +22,7 @@ class MovieForm extends Form {
   schema = {
     _id: Joi.string(),
     title: Joi.string().required().label("Title"),
-    genreId: Joi.string().required().label("Genre"),
+    genre: Joi.string().required().label("Genre"),
     numberInStock: Joi.number().required().min(0).max(100).label("Number In Stock"),
     dailyRentalRate: Joi.number().required().min(0).max(10).label("Daily Rental Rate"),
   };
@@ -31,10 +31,10 @@ class MovieForm extends Form {
     const { data: genres } = await getGenres();
     this.setState({ genres });
   }
-  async populateMovies() { 
+  async populateMovies() {
     try {
-        const movieId = this.props.match.params.id;
-        if (movieId === "new") return;
+      const movieId = this.props.match.params.id;
+      if (movieId === "new") return;
       const { data: movie } = await getMovie(movieId);
       this.setState({ data: this.mapToViewModel(movie) });
     } catch (ex) {
@@ -51,14 +51,15 @@ class MovieForm extends Form {
     return {
       _id: movie._id,
       title: movie.title,
-      genreId: movie.genre,
+      genre: movie.genre,
       numberInStock: movie.numberInStock,
       dailyRentalRate: movie.dailyRentalRate,
     };
   }
 
-  doSubmit = () => {
-    saveMovie(this.state.data);
+
+  doSubmit = async () => {
+    await saveMovie(this.state.data);
 
     this.props.history.push("/movies");
   };
@@ -69,7 +70,7 @@ class MovieForm extends Form {
         <h1>Movie Form</h1>
         <form onSubmit={this.handleSubmit}>
           {this.renderInput("title", "title")}
-          {this.renderSelect("genreId", "Genre", this.state.genres)}
+          {this.renderSelect("genre", "Genre", this.state.genres)}
           {this.renderInput("numberInStock", "Number In Stock", "number")}
           {this.renderInput("dailyRentalRate", "Rate")}
           {this.renderButton("Save")}
