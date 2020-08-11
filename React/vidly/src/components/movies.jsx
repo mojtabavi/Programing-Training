@@ -1,5 +1,6 @@
-import React, { Component } from 'react';
-import {getMovies} from "../services/fakeMovieService";
+import React, { Component } from 'react'; 
+import { toast } from "react-toastify";
+import {getMovies, deleteMovies} from "../services/movieService";
 import {getGenres} from "../services/genreService";
 import { Link } from "react-router-dom";
 import MoviesTable from "./moviesTable";
@@ -26,12 +27,24 @@ class Movies extends Component {
         const { data } = await getGenres();
         const genres = [{ _id: "" , name: 'All Genres'}, ...data]
 
-        this.setState({movies: getMovies(),genres});
+        const {data:movies} = await getMovies();
+        this.setState({movies,genres});
     }
 
-    handleDelete = (movie) => {
-        const movies = movies.filter(m => m._id !== movie._id)
-        this.setState({movies: movies})
+    handleDelete = async (movie) => {
+        const originalMovies = this.state.movies;
+        const movies = originalMovies.filter(m => m._id !== movie._id)
+        this.setState({movies});
+
+        try{
+            
+            await deleteMovies(movie._id);
+        }catch(ex){
+            if(ex.response && ex.response.status === 404)
+                toast.error('This Movie has aleardy been deleted!');
+
+            this.setState({movies: originalMovies});
+        }
     };
 
     handleLike =(movie) => {
