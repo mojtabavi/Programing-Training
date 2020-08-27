@@ -1,7 +1,15 @@
 
-const fs = require('fs');
+const EventEmitter = require('events');
+const emitter = new EventEmitter();
 
-const files = fs.readFileSync('../');
-console.log(files);
+
+//Register a Listener
+emitter.on('messageLogged',function(){
+    console.log('Listener called');
+})
+
+
+//Raise a Event
+emitter.emit('messageLogged');
 
 
