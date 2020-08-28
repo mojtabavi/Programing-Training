@@ -1,11 +1,18 @@
 
 const http = require('http');
 
-const server = http.createServer();
+const server = http.createServer((req,res) => {
+    if(req.url === '/'){
+        res.write('HelloWorld');
+        res.end()
+    }
 
-server.on('connection', (socket) => {
-    console.log('New Connection ...')
+    if(req.url === '/api/course'){
+        res.write(JSON.stringify([1,2,3]));
+        res.end();
+    }
 });
+
 
 server.listen(3000);
 
