@@ -8,6 +8,8 @@ const app = express()
 //app.put()
 //app.delete()
 
+
+
 app.get('/', (req,res) => {
     res.send('HelloWorld!!!');
 });
@@ -15,6 +17,19 @@ app.get('/', (req,res) => {
 
 app.get('/api/courses', (req, res) => {
     res.send([1,2,3]);
+});
+
+app.get('/api/courses/:id', (req, res) => {
+    res.send(req.params.id);
+});
+
+
+app.get('/api/courses/:year/:month', (req, res) => {
+    res.send(req.params);
+});
+
+app.get('/api/courses/query', (req, res) => {
+    res.send(req.query);
 });
 
 const port = process.env.PORT || 3000;
