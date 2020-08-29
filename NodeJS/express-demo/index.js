@@ -5,9 +5,19 @@ const morgan = require("helmet");
 const express = require('express');
 const app = express()
 
+console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
+console.log(`app: ${app.get('env')}`);
+
+
+
 app.use(express.json());
 app.use(helmet());
-app.use(morgan("tiny"));
+
+if(app.get('env') === 'development'){
+    app.use(morgan("tiny"));
+    console.log('Morgan Enabled ... ')
+}
+
 
 
 
