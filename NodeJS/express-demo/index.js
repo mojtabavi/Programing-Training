@@ -3,6 +3,8 @@ const Joi = require('joi');
 const express = require('express');
 const app = express()
 
+app.use(express.json());
+
 //app.get()
 //app.post()
 //app.put()
@@ -92,7 +94,7 @@ app.delete("/api/courses/:id", (req, res) => {
 
   const index = courses.indexOf(course);
   courses.splice(index,1);
-  
+
   res.send(course);
 });
 
