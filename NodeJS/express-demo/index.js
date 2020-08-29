@@ -1,9 +1,15 @@
 
 const Joi = require('joi');
+const helmet = require('morgan');
+const morgan = require("helmet");
 const express = require('express');
 const app = express()
 
 app.use(express.json());
+app.use(helmet());
+app.use(morgan("tiny"));
+
+
 
 //app.get()
 //app.post()
