@@ -1,30 +1,22 @@
+const _ = require('lodash');
 const {User, validate} = require('./user');
 const mongoose = require('mongoose');
 const express = require('express');
 const router = express.Router();
 
-async function createUser(name,email,password){
-    let user = new User({
-        name:name,
-        email:email,
-        password:password
-    });
-
-    await  user.save();
-    return user;
-}
 
 
-router.post('/', (req,res) =>{
+router.post('/', async (req,res) =>{
 /*    const {error} = validate(req.body);
     if (error) return res.status(400).send(error.detail[0].message);*/
 
     /*let user = await User.findOne({ email: req.body.email });
     if(user) return res.status(400).send('User aleardy registered.');*/
+    let user = new User(_.pick(req.body,['name','email','password']));
 
-    createUser(req.body.name,req.body.email,req.body.password)
-        .catch(error => console.error(error))
-    res.status(200).send({'status':'ok'});
+    await user.save();
+
+    res.status(200).send(_.pick(user,['_id','name','email']));
 
 })
 
