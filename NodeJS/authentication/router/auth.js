@@ -1,4 +1,5 @@
 const _ = require('lodash');
+const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 const {User, validate} = require('./user');
 const mongoose = require('mongoose');
@@ -16,7 +17,9 @@ router.post('/', async (req,res) =>{
     const validPassword = await bcrypt.compare(req.body.password,userFind.password);
     if (!validPassword) return res.status(400).send('Invalid email or password')
 
-    res.status(200).send(true);
+    const token = jwt.sign({_id: userFind._id},'jsonprivatekey');
+
+    res.status(200).send(token);
 
 })
 
