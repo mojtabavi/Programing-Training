@@ -22,14 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="23c66fe7-5671-482c-ad8b-e2ad3289835e" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/dbnavigator.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dbnavigator.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NodeJS/authentication/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/NodeJS/authentication/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NodeJS/authentication/node_modules/body-parser/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/NodeJS/authentication/node_modules/body-parser/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NodeJS/authentication/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/NodeJS/authentication/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/NodeJS/authentication/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/NodeJS/authentication/package.json" afterDir="false" />
-    </list>
+    <list default="true" id="23c66fe7-5671-482c-ad8b-e2ad3289835e" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -58,7 +51,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../node.js_sms_authentication" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/React-Native" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="prettierjs.PrettierConfiguration.NodeInterpreter" value="project" />
     <property name="run.prettier.on.save" value="true" />
@@ -93,6 +86,7 @@
       <workItem from="1599296968169" duration="315000" />
       <workItem from="1599397133695" duration="657000" />
       <workItem from="1599405667112" duration="20000" />
+      <workItem from="1600882601022" duration="61000" />
     </task>
     <servers />
   </component>
@@ -128,10 +122,10 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="492" y="210" width="926" height="693" key="DBNavigator.ProjectSettingsDialog/0.27.1920.1053@0.27.1920.1053" timestamp="1599160634696" />
-    <state x="737" y="313" width="426" height="493" key="FileChooserDialogImpl" timestamp="1599405685476">
+    <state x="737" y="313" width="426" height="493" key="FileChooserDialogImpl" timestamp="1600882656260">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="737" y="313" width="426" height="493" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1599405685476" />
+    <state x="737" y="313" width="426" height="493" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1600882656260" />
     <state x="387" y="68" width="1039" height="737" key="SettingsEditor" timestamp="1599252237534">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
