@@ -19,8 +19,9 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="59a2d644-0153-4489-9998-5a46783f67c2" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/DoneWithIt" beforeDir="false" afterPath="$PROJECT_DIR$/DoneWithIt" afterDir="false" />
+    <list default="true" id="c5478492-40bd-4882-9529-b425961dd166" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/../../React-Native/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../React-Native/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../React-Native/DoneWithIt" beforeDir="false" afterPath="$PROJECT_DIR$/../../React-Native/DoneWithIt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,13 +29,15 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
   <component name="GitToolBoxStore">
     <option name="projectConfigVersion" value="2" />
   </component>
-  <component name="ProjectId" id="1hvDQgvf9HwNA5ZodHY5KmQI3NO" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectId" id="1hyCcAchu4mgwupF2nxxJDS5s4H" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="1" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -42,19 +45,19 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$USER_HOME$/w/chat" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../electron-quick-start" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="59a2d644-0153-4489-9998-5a46783f67c2" name="Default Changelist" comment="" />
-      <created>1600882658752</created>
+      <changelist id="c5478492-40bd-4882-9529-b425961dd166" name="Default Changelist" comment="" />
+      <created>1600974022128</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1600882658752</updated>
-      <workItem from="1600882660327" duration="2827000" />
+      <updated>1600974022128</updated>
+      <workItem from="1600974023155" duration="784000" />
     </task>
     <servers />
   </component>
@@ -73,9 +76,9 @@
     </option>
   </component>
   <component name="WindowStateProjectService">
-    <state x="742" y="310" width="426" height="493" key="FileChooserDialogImpl" timestamp="1600885677373">
+    <state x="742" y="310" width="426" height="493" key="FileChooserDialogImpl" timestamp="1600974805436">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="742" y="310" width="426" height="493" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1600885677373" />
+    <state x="742" y="310" width="426" height="493" key="FileChooserDialogImpl/0.27.1920.1053@0.27.1920.1053" timestamp="1600974805436" />
   </component>
 </project>
